@@ -1,0 +1,7 @@
+1] Accept the user sign up details from the html page and display all the details in tabular format using javascript
+2] Design a page with some products along with price 
+   user will select some product and quantity 
+
+   based on the selection show user with total price 
+   
+   if total is above 1000 apply 10% discount on final total

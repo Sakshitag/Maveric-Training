@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function calculation() {
+
+            var num1 = parseInt(document.getElementById('val1').value)
+            var num2 = parseInt(document.getElementById('val2').value)
+
+            var choice = parseInt(document.getElementById('calc').value)
+
+            switch (choice) {
+                case 1:
+                    alert("Addition " + (num1 + num2))
+                    break;
+
+                case 2:
+                    alert("Subtraction " + (num1 - num2))
+                    break;
+                case 3:
+                    alert("Multiplication " + (num1 * num2))
+                    break;
+                case 4:
+                    alert("Division " + (num1 / num2))
+                    break;
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <table border="2px" cellspacing="10" cellpadding="10">
+
+        <tr>
+            <td>Enter first value</td>
+            <td><input type="text" id="val1"></td>
+        </tr>
+
+        <tr>
+            <td>Enter second value</td>
+            <td><input type="text" id="val2"></td>
+        </tr>
+
+        <tr>
+            <td>Select calculation </td>
+            <td><select id="calc">
+                <option value="1">Addition</option>
+                <option value="2">Subtraction</option>
+                <option value="3">Multiplication</option>
+                <option value="4">Division</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button onclick="calculation()">Calculation</button></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

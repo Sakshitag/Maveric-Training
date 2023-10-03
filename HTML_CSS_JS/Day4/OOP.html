@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // ES6
+
+        function Employee(){
+            this.empId=101;
+            this.empNmae="Sakshi";
+            this.empsalary=1000;
+
+            this.showEmployeeDetails=function(){
+                alert("Employee details are"+this.empId+" "+this.empNmae+" "+this.empsalary)
+            }
+        }
+        var emp1 = new Employee();
+        emp1.showEmployeeDetails();
+
+        
+
+
+        function Employee1(empId, empName, salary) {
+            this.empId = empId;
+            this.empName = empName;
+            this.salary = salary;
+
+            this.showEmployeeDetails = function() {
+                alert("Employee Details are " + this.empId + " " + this.empName + " and " + this.salary)
+            }
+        }
+        var emp1 = new Employee1(101, "Smita", 10000);
+        emp1.showEmployeeDetails();
+
+        var emp2 = new Employee1(102, "Amrita", 20000);
+        emp2.showEmployeeDetails();
+
+
+
+        
+        var empRecords = new Array();
+
+        empRecords.push(new Employee1(101, "Manish", 10000))
+        empRecords.push(new Employee1(102, "Anish", 20000))
+        empRecords.push(new Employee1(103, "Tanish", 30000))
+        empRecords.push(new Employee1(104, "Kanish", 40000))
+        empRecords.push(new Employee1(105, "Vanish", 50000))
+
+
+        empRecords.forEach(rec => {
+            rec.showEmployeeDetails();
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

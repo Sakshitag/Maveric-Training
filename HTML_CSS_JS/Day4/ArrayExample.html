@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        var arr = [10, 20, 30, 40, 50]
+        for (var i = 0; i < arr.length; i++)
+            document.write(arr[i] + "<br/>")
+
+        document.write("<br/><br/><br/>")
+
+
+        //foreach with ES6
+        arr.forEach(ele => {
+            document.write(ele + "<br/>")
+        });
+ var friendList = new Array();
+
+        function saveData() {
+            var name = document.getElementById('fname').value
+
+            friendList.push(name)
+            alert("Name is saved in friend list")
+        }
+
+
+        function displayRecords() {
+            // friendList.forEach(friend => {
+            //     document.getElementById('flist').append(friend)
+            // });
+
+            tbl = "<table border='2px'>"
+            for (let index = 0; index < friendList.length; index++) {
+                tbl += "<tr><td>" + friendList[index] + "</td></tr>"
+            }
+            document.getElementById('flist').innerHTML = tbl
+        }
+
+
+        function searchData() {
+            var searchName = document.getElementById('searchName').value
+            var flag = 0;
+            for (let index = 0; index < friendList.length; index++) {
+                if (friendList[index] == searchName) {
+                    alert("Name found")
+                    flag = 1;
+                }
+            }
+            if (flag == 0) {
+                alert("Record not found")
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+    <table border="2px">
+        <tr>
+            <td>
+                Enter your friends name <input type="text" id="fname">
+            </td>
+            <td>
+                <button onclick="saveData()">SAVE DATA</button>
+            </td>
+            <td>
+                <button onclick="displayRecords()">Display DATA</button>
+            </td>
+            <td>
+                Enter the name to search in the list<input type="text" id="searchName">
+                <button onclick="searchData()">Search Data</button>
+            </td>
+        </tr>
+    </table>
+
+    <div id="flist"></div>
+</body>
+
+</html>

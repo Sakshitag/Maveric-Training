@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        table {
+            background-color: rgb(204, 230, 118);
+            font-size: 20px;
+            align-items: center;
+        }
+    </style>
+    <script>
+        function getData() {
+            var name = document.getElementById("uname").value
+            var email = document.getElementById("email").value
+            var dob = document.getElementById("dob").value
+            var techid = document.getElementById("techid").value
+
+            document.getElementById('d1').innerHTML = "User details:: " + name + " email  " + email + " dob  " + dob + " techid  " + techid
+        }
+    </script>
+</head>
+<body>
+
+    <table border="2px" cellspacing="10" cellpadding="10">
+        <tr>
+            <td>Enter your name</td>
+            <td><input type="text" id="uname" /></td>
+        </tr>
+        <tr>
+            <td>Enter your email id </td>
+            <td> <input type="email" id="email" /></td>
+        </tr>
+
+        <tr>
+            <td>Enter your date of birth </td>
+            <td> <input type="date" id="dob" /></td>
+        </tr>
+
+        <tr>
+            <td>Select Technology</td>
+            <td><select id="techid">
+                <option value="C">C</option>
+                <option value="C++">C++</option>
+                <option value="JAVA">JAVA</option>
+                <option value="HTML">HTML</option>
+
+            </select></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"> <button style="background-color:rgb(196, 172, 63)" onclick="getData()">Display Data</button> </td>
+        </tr>
+
+    </table>
+    <div id="d1"></div>
+
+</body>
+
+</html>

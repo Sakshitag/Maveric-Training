@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script>
+        function addition() {
+            var val1 = parseInt(prompt("Enter first value"))
+            var val2 = parseInt(prompt("Enter second value"))
+
+            alert("Addition = " + (val1 + val2))
+        }
+
+        function subtraction(val1, val2) {
+            alert("Subtraction = " + (val1 - val2))
+        }
+
+        function multiplication() {
+            var val1 = parseInt(prompt("Enter first value"))
+            var val2 = parseInt(prompt("Enter second value"))
+            return val1 * val2;
+        }
+
+        function division(val1, val2) {
+            return val1 / val2;
+        }
+        var choice = parseInt(prompt("1] Addition\n2] Subtraction\n3] Multiplication\n4] Division\n\nEnter your choice"))
+
+        switch (choice) {
+
+            case 1:
+                addition();
+                break;
+
+            case 2:
+                var val1 = parseInt(prompt("Enter first value"))
+                var val2 = parseInt(prompt("Enter second value"))
+                subtraction(val1, val2);
+                break;
+
+            case 3:
+
+                var res = multiplication();
+                alert("Multiplication = " + res)
+                break;
+            case 4:
+
+                var val1 = parseInt(prompt("Enter first value"))
+                var val2 = parseInt(prompt("Enter second value"))
+
+                var result = division(val1, val2)
+                alert("Division = " + result)
+
+                break;
+
+            default:
+                alert("Invalied Choice!!!!!")
+        }
+    </script>
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

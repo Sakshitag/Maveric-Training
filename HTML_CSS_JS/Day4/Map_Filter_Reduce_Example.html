@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+         var values = [10, 20, 30, 40, 50, 60, 70]
+
+        // using for Each loop
+         values.forEach(element => {
+            console.log(element)
+             //alert(element)
+        });
+
+        //map 
+        values.map((ele, index, numbers) => {
+            console.log(index + " => " + ele + " = > " + numbers)
+        });
+        var resul1 = values.map(val => val * 2)
+        console.log(resul1)
+
+
+        //filter
+        var collection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 43, 65, 767, 87]
+        var even = collection.filter(ele => ele % 2 == 0)
+        console.log(even)
+
+
+        var employee = [{
+            "id": 101,
+            "name": "Eshan",
+            "salary": 10000
+        }, {
+            "id": 102,
+            "name": "Tanish",
+            "salary": 20000
+        }, {
+            "id": 103,
+            "name": "Manish",
+            "salary": 30000
+        }, {
+            "id": 104,
+            "name": "Paresh",
+            "salary": 40000
+        }, {
+            "id": 105,
+            "name": "Anand",
+            "salary": 50000
+        }]
+        var result2 = employee.filter(emp => emp.salary >= 40000)
+        console.log(result2)
+
+
+        //reduce
+        let num = [5, 9, 12, 24, 67]
+        let sum = num.reduce(function(val, curValue) {
+            return val + curValue
+        }, 0)
+        console.log(sum)
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

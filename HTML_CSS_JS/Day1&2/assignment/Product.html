@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Selection</title>
+    <style>
+        .chocolate{
+            display: grid;
+             grid-row-gap: 1px;  
+             grid-column-gap: 1px; 
+             grid-template-columns: auto auto auto auto; 
+        }
+        fieldset {
+    background-color: rgb(249, 113, 176);
+    border-radius: 0px 30px 60px;
+    margin: 20px;
+}
+    </style>
+   <script src="ProductScript.js"></script>
+</head>
+<body>
+   <fieldset>
+    <h1 style="text-align: center">Chocholate Market</h1>
+  
+    <div class="chocolate">
+        <div class="Dairymilk">
+            <p>
+                <img src="chocolate pic/dairymilk.jfif" width="150px" height="150px" alt="">
+                <p> Dairymilk Chocolate</p>
+                <p> Price: ₹150</p>
+                Please select Quantity <input type="number" id="product1Quantity" value="0" min="0">
+            </p>
+        </div>
+        <div class="KitKat">
+            <p>
+                <img src="chocolate pic/kitkat.jfif" width="150px" height="150px" alt="">
+                <p> KitKat Chocolate</p>
+                <p> Price: ₹200</p>
+                Please select Quantity <input type="number" id="product2Quantity" value="0" min="0">
+            </p>
+        </div>
+        <div class="5Star">
+            <p>
+                <img src="chocolate pic/5star.jfif" width="150px" height="150px" alt="">
+                <p> 5Star Chocolate</p>
+                <p> Price: ₹300 </p>
+                Please select Quantity<input type="number" id="product3Quantity" value="0" min="0">
+            </p>
+        </div>
+        <div class="Hersheys">
+            <p>
+                <img src="chocolate pic/hersheys.jfif" width="150px" height="150px" alt="">
+                <p> Hersheys Chocolate</p>
+                <p> Price: ₹250  </p>
+                Please select Quantity<input type="number" id="product4Quantity" value="0" min="0">
+            </p>
+        </div>
+    </div>
+    
+    <button onclick="calculateTotal()">Calculate Total</button>
+    <h2>Result:</h2>
+    <p id="total"></p>
+    <p id="discount"></p>
+    <p id="pay"></p>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function saveData() {
+            // Check browser support
+            if (typeof (Storage) != "undefined") {
+                // Store
+                localStorage.setItem("newname", "eshan");
+
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+
+        function getData() {
+            // Check browser support
+            if (typeof (Storage) != "undefined") {
+                // Retrieve
+                document.getElementById("result").innerHTML = localStorage.getItem("newname");
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="saveData()">Save</button>
+    <button onclick="getData()">Retrive</button>
+    <div id="result"></div>
+</body>
+
+</html>

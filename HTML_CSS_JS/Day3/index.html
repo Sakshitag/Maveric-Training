@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 50%;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            font-size: 20px;
+            background-color: rgb(169, 244, 244);
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Progress bar Example</legend>
+        <progress value="60" max="100"></progress> 60%
+    </fieldset>
+
+    <fieldset>
+        <legend>Meter Example</legend>
+        50 of 100 <meter min="0" max="100" value="50"></meter>
+    </fieldset>
+
+    <fieldset>
+        <legend>Data list example</legend>
+        <input list="browsers" name="browsers">
+        <datalist id="browsers">
+            <option value="Internate Explorer"></option>
+            <option value="Chrome"></option>
+            <option value="FireFox"></option>
+            <option value="MS Edge"></option>
+        </datalist>
+    </fieldset>
+
+    <fieldset>
+        Enter you Name <input type="name" placeholder="Enter ur name here"> </br>
+        Enter Your Salary <input type="text" value="10000" readonly>
+
+        <form action="">
+            Enter Name <input type="text" pattern="[a-zA-Z]*"> </br>
+            <input type="submit" value="CLICK">
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <!-- its show live input -->
+        <form oninput="o.value=a.value*b.value">
+            <input name="a" value="2" type="number"> x
+            <input name="b" value="3" type="number"> =
+            <output name="o">6</output>
+        </form>
+    </fieldset>
+
+    <fieldset>
+        <select name="country">
+            <optgroup label="Africa">
+                <option value="gam">Gambia</option>
+                <option value="mad">Madagascar</option>
+                <option value="nam">Namibia</option>
+            </optgroup>
+            <optgroup label="India">
+                <option value="Mum">Mumbai</option>
+                <option value="che">Chennai</option>
+                <option value="bang">Bangalore</option>
+            </optgroup>
+        </select>
+
+        <ul>
+            <!-- to set tab priorities -->
+            <li><a href="here.html" tabindex="1"> step1 </a></li>
+            <li><a href="here.html" tabindex="3"> step3 </a></li>
+            <li><a href="here.html" tabindex="2"> step2 </a></li>
+        </ul>
+
+        <form>
+            <!-- user shortcut alt+'accesskey' -->
+            <p><a href="/index.php" accesskey="I"> Index Page </a></p>
+            <input type="text" accesskey="P">
+        </form>
+    </fieldset>
+    <fieldset>
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <mrow>
+              <msup><mi>a</mi><mn>2</mn></msup>
+              <mo>+</mo>
+              <msup><mi>b</mi><mn>2</mn></msup>
+              <mo>=</mo>
+              <msup><mi>c</mi><mn>2</mn></msup>
+            </mrow>
+        
+            <msup><mi>f</mi><mrow><mo>(</mo><mn>-1</mn><mo>)</mo></mrow></msup>
+          </math>
+    </fieldset>
+
+    <fieldset>
+        <svg id="svgelem" height="200">
+            <defs>
+                <radialGradient id="gradient" cx="50%" cy="50%" r="50%"
+                fx="50%" fy="50%">
+                <stop offset="0%" style="stop-color:rgb(200,200,200);
+                stop-opacity:0"/>
+                <stop offset="100%" style="stop-color:rgb(0,0,255);
+                stop-opacity:1"/>
+                </radialGradient>
+             </defs>
+              <ellipse cx="200" cy="120" rx="100" ry="50" 
+                style="fill:url(#gradient)" />
+
+                <polyline points="0,0 0,20 20,20 20,40 40,40 40,60" fill="red" />
+                <polygon  points="20,10 300,20, 170,50" fill="red" /> 
+
+                 <rect id="redrect" cx="100" cy="100" width="20" height="20" fill="green" />
+            <circle id="redcircle" cx="100" cy="100" r="20" fill="red" />
+        </svg>
+    </fieldset>
+</body>
+
+</html>

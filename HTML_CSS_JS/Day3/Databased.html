@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var db;
+
+        function createDatabase() {
+            db = openDatabase("mywebdb", "1.0", "THis is just a simple database", 2 * 1024 * 1024)
+            alert("Database is created successfully...")
+        }
+
+        function createTable() {
+            db.transaction(function(tx) {
+                tx.executeSql("CREATE TABLE IF NOT EXISTS myEmployee(id unique,name,salary)")
+                alert("Table is created successfully")
+            })
+
+        }
+
+        function saveData() {
+            var id = document.getElementById('empId').value
+            var name = document.getElementById('empName').value
+            var salary = document.getElementById('salary').value
+
+            db.transaction(function(tx) {
+                console.log("INSERT INTO myEmployee(id,name,salary) VALUES (" + id + ",'" + name + "'," + salary + ")")
+                tx.executeSql("INSERT INTO myEmployee(id,name,salary) VALUES (" + id + ",'" + name + "'," + salary + ")")
+                alert("Data is inserted successfully")
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="createDatabase()">Create Database</button>
+    <button onclick="createTable()">Create Table</button>
+
+    <table border="2px">
+        <tr>
+            <td>Enter empId</td>
+            <td><input type="text" id="empId"></td>
+        </tr>
+        <tr>
+            <td>Enter name</td>
+            <td><input type="text" id="empName"></td>
+        </tr>
+        <tr>
+            <td>Enter Salary</td>
+            <td><input type="text" id="salary"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="saveData()">Save Data</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
